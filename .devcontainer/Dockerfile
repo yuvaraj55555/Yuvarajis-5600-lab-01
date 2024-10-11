@@ -35,7 +35,7 @@ RUN rm -rf /usr/share/nginx/html
 RUN ln -s /lab /usr/share/nginx/html
 
 # Expose port 80 to the host
-EXPOSE 80
+# EXPOSE 80
 
 # Set nginx as the entrypoint to start it automatically
 ENTRYPOINT ["nginx", "-g", "daemon off;"]

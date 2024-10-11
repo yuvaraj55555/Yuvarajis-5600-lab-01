@@ -15,22 +15,29 @@
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [3000],
+  "forwardPorts": [80],
 
   // Use 'portsAttributes' to set default properties for specific forwarded ports.
   // More info: https://containers.dev/implementors/json_reference/#port-attributes
-  // "portsAttributes": {
-  //   "8080": {
-  //     "label": "Hello Remote World",
-  //     "onAutoForward": "notify"
-  //   }
-  // },
-
-  "build": {
-    "dockerfile": "./Dockerfile"
+  "portsAttributes": {
+    "80": {
+      "label": "Hello Remote World",
+      "onAutoForward": "notify"
+    }
   },
-  // Automatically expose port 8080 (mapped to container's port 80, nginx's default) for development
-  "appPort": "8080:80",
+
+  // Use the official nginx image
+  "image": "nginx:latest",
+
+  // Automatically expose port 80 for development
+  "appPort": "80:80",
+
   // Make sure our nginx container's default command runs, which starts up the web server in the background.
-  "overrideCommand": false
+  "overrideCommand": false,
+
+  // Mount the custom nginx.conf and the directory to serve
+  "mounts": [
+    "source=${localWorkspaceFolder}/.nginx/nginx.conf,target=/etc/nginx/nginx.conf,type=bind",
+    "source=${localWorkspaceFolder}/lab,target=/usr/share/nginx/html,type=bind"
+  ]
 }
