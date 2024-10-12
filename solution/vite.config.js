@@ -4,5 +4,10 @@ export default {
     hmr: {
       clientPort: 443,
     }
+  },
+  build: {
+    rollupOptions: {
+      input: 'index.html'
+    }
   }
 }

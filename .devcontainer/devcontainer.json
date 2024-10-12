@@ -1,6 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 {
   "name": "IS 5600 - Lab 1",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
 
@@ -17,22 +18,26 @@
   },
 
   // // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [80],
+  "forwardPorts": [3000],
 
   "portsAttributes": {
-    "80": {
+    "3000": {
       "label": "Application",
       "onAutoForward": "openPreview"
     }
   },
 
-  // "image": "nginx:latest",
-  "build": { "dockerfile": "Dockerfile" },
+  // "build": { "dockerfile": "Dockerfile" },
 
   // Automatically expose port 80 for development
-  "appPort": "80:80",
+
   // Make sure our nginx container's default command runs, which starts up the web server in the background.
-  "overrideCommand": false
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install && npm run build",
+  "postCreateCommand": "npm run dev"
+  // "postAttachCommand": {
+  //   "server": "npm run dev"
+  // }
 
   // Mount the custom nginx.conf and the directory to serve
   // "mounts": [
