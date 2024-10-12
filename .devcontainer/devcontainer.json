@@ -1,5 +1,4 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
   "name": "IS 5600 - Lab 1",
   // Features to add to the dev container. More info: https://containers.dev/features.
@@ -21,7 +20,7 @@
   // More info: https://containers.dev/implementors/json_reference/#port-attributes
   "portsAttributes": {
     "80": {
-      "label": "Hello Remote World",
+      "label": "Nginx Lab",
       "onAutoForward": "notify"
     }
   },
@@ -37,7 +36,7 @@
 
   // Mount the custom nginx.conf and the directory to serve
   "mounts": [
-    "source=${localWorkspaceFolder}/.nginx/nginx.conf,target=/etc/nginx/nginx.conf,type=bind",
+    "source=${localWorkspaceFolder}/.nginx/server.conf,target=/etc/nginx/conf.d/server.conf,type=bind",
     "source=${localWorkspaceFolder}/lab,target=/usr/share/nginx/html,type=bind"
   ]
 }
