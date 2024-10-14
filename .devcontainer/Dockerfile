@@ -24,18 +24,22 @@ RUN apk update \
 # - git and gnupg are useful for remote development so that we
 #   can commit and sign commits from within the container
 # - and of course nginx itself
+
 RUN apk add --no-cache \
   git \
   gnupg \
   nginx
 
+# RUN mkdir -p /etc/nginx/conf.d
+COPY nginx/conf.d/default.conf /etc/nginx/http.d/default.conf
+
 # Finally, we'll remove nginx's default content and replace it
 # with a symlink to our source code.
 RUN rm -rf /usr/share/nginx/html
-RUN ln -s /lab /usr/share/nginx/html
+RUN ln -s /workspaces/week-01/lab /usr/share/nginx/html
 
 # Expose port 80 to the host
-# EXPOSE 80
+EXPOSE 80
 
 # Set nginx as the entrypoint to start it automatically
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
