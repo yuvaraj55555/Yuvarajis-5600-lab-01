@@ -13,22 +13,59 @@ _Note_ You should be able to complete this lab without making changes to the `in
 
 ![Figure 4.43](./figure-4.43.jpg "Figure 4.43 - Completed Project")
 
-## Getting Started with GitHub and Codespaces
+# Getting Started with GitHub and Codespaces
 
-### Forking the Repository
+Welcome to the course! In this guide, you’ll learn how to set up your coding environment using GitHub and Codespaces. By following these steps, you’ll be able to work on your lab assignments, write and test your code, and submit your work for review. Let's get started!
 
-1. Navigate to the repository on GitHub.
-2. Click the "Fork" button at the top-right corner of the repository page.
-3. Choose your GitHub account as the destination for the forked repository.
-4. Once the repository is forked, you will be redirected to your forked repository.
+## Step 1: Fork the Repository
 
-### Running the Repository in Codespaces
+Forking a repository means making a copy of it under your GitHub account. This allows you to make changes without affecting the original project.
 
-1. In your forked repository, click the green "Code" button.
-2. Select the "Codespaces" tab.
-3. Click the "Create codespace on main" button.
-4. Wait for Codespaces to set up your development environment. This may take a few minutes.
-5. Once the setup is complete, you will be redirected to the Codespaces environment where you can start working on the project.
+1. **Open the Repository**: Start by navigating to the GitHub repository link provided by your instructor.
+2. **Click "Fork"**: In the top-right corner, find the “Fork” button and click it.
+3. **Select Your Account**: Choose your GitHub account as the destination for the fork. Once done, you’ll be redirected to your forked copy of the repository.
+   
+   > **Tip**: Make sure you’re logged into your GitHub account, or you won’t see the option to fork!
+
+## Step 2: Open the Repository in Codespaces
+
+With your forked repository ready, you can now set up a development environment using Codespaces. This setup provides a pre-configured environment for you to code in, with everything you need to complete the lab.
+
+1. **Open the Codespaces Menu**:
+   - In your forked repository, click the green "Code" button, then switch to the "Codespaces" tab.
+2. **Create a Codespace**:
+   - Click on "Create codespace on main" to start the setup.
+3. **Wait for Codespaces to Load**:
+   - It may take a few minutes for Codespaces to create and configure your environment. Be patient, as it’s setting up all the tools you’ll need.
+4. **Start Coding**:
+   - Once the setup is complete, Codespaces will automatically open a new browser tab where your code will be ready to run. You’ll be able to see the code and any outputs as you go through the lab assignment.
+
+## Step 3: Complete the Lab Assignment
+
+Inside the Codespaces environment, you’ll find all the files and instructions you need. Follow the steps outlined in the README file to complete your assignment.
+
+1. **Read the Instructions**: Carefully go through the README file to understand the tasks you need to complete.
+2. **Edit the Code**: Make the necessary changes to the code files as instructed.
+3. **Run and Test Your Code**: Use the terminal and editor within Codespaces to run your code and make sure everything works as expected.
+
+   > **Hint**: If you’re stuck, try reviewing the README file again or refer to any resources provided by your instructor.
+
+## Step 4: Submit Your Work via Pull Request
+
+Once you’ve completed the assignment, it’s time to submit your work. You’ll do this by creating a pull request, which is a way to propose your changes to the original repository.
+
+1. **Commit Your Changes**:
+   - Save your work by committing your changes. In Codespaces, go to the Source Control panel, write a commit message, and click "Commit" to save your changes.
+2. **Push to Your Fork**:
+   - After committing, click "Push" to upload your changes to your forked repository on GitHub.
+3. **Create a Pull Request**:
+   - Go back to your GitHub repository, and you’ll see an option to “Compare & pull request.” Click it to start your pull request.
+   - Include your name in the pull request description so your instructor knows who submitted it.
+4. **Submit the Pull Request**:
+   - Click "Create pull request" to submit your work for review. Your instructor will be notified and can review your work.
+
+And that’s it! You’ve now completed your first lab assignment using GitHub and Codespaces. Well done!
+
 
 ### Additional Steps
 
