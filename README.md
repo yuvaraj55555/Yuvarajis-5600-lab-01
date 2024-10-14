@@ -13,6 +13,35 @@ _Note_ You should be able to complete this lab without making changes to the `in
 
 ![Figure 4.43](./figure-4.43.jpg "Figure 4.43 - Completed Project")
 
+## Getting Started with GitHub and Codespaces
+
+### Forking the Repository
+
+1. Navigate to the repository on GitHub.
+2. Click the "Fork" button at the top-right corner of the repository page.
+3. Choose your GitHub account as the destination for the forked repository.
+4. Once the repository is forked, you will be redirected to your forked repository.
+
+### Running the Repository in Codespaces
+
+1. In your forked repository, click the green "Code" button.
+2. Select the "Codespaces" tab.
+3. Click the "Create codespace on main" button.
+4. Wait for Codespaces to set up your development environment. This may take a few minutes.
+5. Once the setup is complete, you will be redirected to the Codespaces environment where you can start working on the project.
+
+### Additional Steps
+
+1. Open the terminal in Codespaces.
+2. Run the following commands to install dependencies and start the development server:
+    ```sh
+    npm install
+    npm run dev
+    ```
+3. You can now view the project in the browser by clicking the "Application" port in the Ports panel.
+
+Follow the instructions in the previous sections to complete the lab.
+
 ## Instructions
 
 1. Open the Replit classroom for this lab. You will see two files: `index.html` and `style.css`.
