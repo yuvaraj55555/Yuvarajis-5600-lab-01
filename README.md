@@ -171,7 +171,8 @@ header div a:hover {
 }
 ```
 
-14. Lastly, let's add the icons for the comments and favorites. First, target the `.social` class selector. We'll add a margin top of 1rem, and set the font size to 12px per the mockup.
+14. Let's add the icons for the comments and favorites. First, target the `.social` class selector. We'll add a margin top of 1rem, and set the font size to 12px per the mockup.
+
 Next, let's target both of the `.social span` elements. The styles between the comment and the heart icon are very similar, so we save some keystrokes by targeting the most generic selector. The only difference between the `.heart` and `.comment` elements are their background images.
 We'll need to set the background image size for the `.social span` to contain, and ensure the image does not repeat. We should also add a small padding to the left of the icons, so they are not right up against the text, and some small margin to the right of the icons, so they are not right up against each other.
 
@@ -197,7 +198,9 @@ We'll need to set the background image size for the `.social span` to contain, a
 }
 ```
 
-![Figure 4.43](./figure-4.43.jpg "Figure 4.43 - Completed Project")
+15. Finally, on your own, try and refactor the `main > .card` in such a way where the parent `main` element uses flexbox to manage the layout of the children `.cards` instead of floats. Because we have written the cards to use percentage widths, there is a small gap at the end of the cards on the right. Can you use flexbox to remove the gap? 
+
+![Figure 4.43](./images/figure-4.43.jpg "Figure 4.43 - Completed Project")
 
 #### Figure 4.43
 
@@ -206,10 +209,6 @@ We'll need to set the background image size for the `.social span` to contain, a
 ## Guidance and Testing
 
 1. The steps above should walk you through creating the layout to match the mockup. You can review the video walkthrough for further guidance.
-
-## Bonus Points
-
-1. Refactor the card to use flexbox instead of floats. Because the cards are using precentage widths, there is a small gap between the cards on the right. Can you figure out how to remove the gap using flexbox? Additionaly the cards have varying heights. Can you figure out how to make the cards all the same height?
 
 ## Submission
 
